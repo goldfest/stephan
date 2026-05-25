@@ -1,0 +1,15 @@
+# Java / Spring
+backend/target/
+backend/data/
+backend/.idea/
+backend/*.iml
+
+# Node / Vite
+frontend/node_modules/
+frontend/dist/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.log

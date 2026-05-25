@@ -1,0 +1,145 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "ADMIN"
+    },
+    {
+      "username": "ivan",
+      "email": "ivan@example.com",
+      "password": "user123",
+      "role": "USER"
+    },
+    {
+      "username": "anna",
+      "email": "anna@example.com",
+      "password": "user123",
+      "role": "USER"
+    },
+    {
+      "username": "stephan",
+      "email": "stephan@example.com",
+      "password": "user123",
+      "role": "USER"
+    }
+  ],
+  "tags": [
+    "spring",
+    "react",
+    "java",
+    "study",
+    "life",
+    "exam"
+  ],
+  "posts": [
+    {
+      "title": "Spring Boot и REST API",
+      "content": "Подготовил пример контроллеров, DTO и сервисов для экзаменационного full-stack проекта.",
+      "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80",
+      "author": "admin",
+      "tags": ["spring", "java", "exam"]
+    },
+    {
+      "title": "React SPA без перезагрузки страниц",
+      "content": "Фильтры, пагинация, индикаторы загрузки и уведомления помогают сделать интерфейс удобным.",
+      "imageUrl": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=900&q=80",
+      "author": "ivan",
+      "tags": ["react", "study"]
+    },
+    {
+      "title": "План на неделю",
+      "content": "Закрыть CRUD по постам и комментариям, проверить авторизацию и подготовить README.",
+      "imageUrl": null,
+      "author": "anna",
+      "tags": ["study", "life"]
+    },
+    {
+      "title": "Почему нужны DTO",
+      "content": "DTO отделяют внешний контракт API от внутренней модели данных и упрощают валидацию запросов.",
+      "imageUrl": null,
+      "author": "stephan",
+      "tags": ["java", "spring", "study"]
+    },
+    {
+      "title": "Фильтрация по автору и дате",
+      "content": "На сервере реализован поиск по тексту, автору, тегу и диапазону дат. Клиент обновляет список без полной перезагрузки.",
+      "imageUrl": null,
+      "author": "ivan",
+      "tags": ["react", "spring", "exam"]
+    },
+    {
+      "title": "Маленькое наблюдение",
+      "content": "Хороший проект для защиты проще объяснять, когда бизнес-логика вынесена в сервисы.",
+      "imageUrl": null,
+      "author": "anna",
+      "tags": ["life", "exam"]
+    }
+  ],
+  "comments": [
+    {
+      "postTitle": "Spring Boot и REST API",
+      "author": "ivan",
+      "text": "Отличный пример для старта проекта."
+    },
+    {
+      "postTitle": "Spring Boot и REST API",
+      "author": "anna",
+      "text": "Swagger тоже удобно показать на защите."
+    },
+    {
+      "postTitle": "React SPA без перезагрузки страниц",
+      "author": "admin",
+      "text": "Добавил проверку ошибок 400/401/403/404/500."
+    },
+    {
+      "postTitle": "Фильтрация по автору и дате",
+      "author": "stephan",
+      "text": "Фильтры по тегам пригодятся для демонстрации."
+    },
+    {
+      "postTitle": "Маленькое наблюдение",
+      "author": "ivan",
+      "text": "Главное не забыть про тестовые логины в README."
+    }
+  ],
+  "likes": [
+    {
+      "postTitle": "Spring Boot и REST API",
+      "username": "ivan"
+    },
+    {
+      "postTitle": "Spring Boot и REST API",
+      "username": "anna"
+    },
+    {
+      "postTitle": "Spring Boot и REST API",
+      "username": "stephan"
+    },
+    {
+      "postTitle": "React SPA без перезагрузки страниц",
+      "username": "admin"
+    },
+    {
+      "postTitle": "React SPA без перезагрузки страниц",
+      "username": "anna"
+    },
+    {
+      "postTitle": "Почему нужны DTO",
+      "username": "ivan"
+    },
+    {
+      "postTitle": "Фильтрация по автору и дате",
+      "username": "admin"
+    },
+    {
+      "postTitle": "Фильтрация по автору и дате",
+      "username": "anna"
+    },
+    {
+      "postTitle": "Маленькое наблюдение",
+      "username": "stephan"
+    }
+  ]
+}
