@@ -27,6 +27,7 @@ export const postsApi = {
 }
 
 export const commentsApi = {
+  search: (filters) => api.get('/comments', { params: buildParams(filters) }),
   byPost: (postId, page = 0, size = 10) => api.get(`/posts/${postId}/comments`, { params: { page, size } }),
   create: (postId, payload) => api.post(`/posts/${postId}/comments`, payload),
   update: (id, payload) => api.put(`/comments/${id}`, payload),

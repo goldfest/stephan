@@ -15,6 +15,17 @@ import org.springframework.web.bind.annotation.*;
 public class CommentController {
     private final CommentService commentService;
 
+
+    @GetMapping("/api/comments")
+    public Page<CommentResponseDto> search(
+            @RequestParam(required = false) Long postId,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            Authentication authentication
+    ) {
+        return commentService.search(postId, page, size, authentication);
+    }
+
     @GetMapping("/api/posts/{postId}/comments")
     public Page<CommentResponseDto> findByPost(
             @PathVariable Long postId,

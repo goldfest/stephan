@@ -4,6 +4,7 @@ import AppNavbar from './components/AppNavbar'
 import ProtectedRoute from './components/ProtectedRoute'
 import { useAuth } from './hooks/useAuth'
 import AllPostsPage from './pages/AllPostsPage'
+import CommentsPage from './pages/CommentsPage'
 import LoginPage from './pages/LoginPage'
 import MyPostsPage from './pages/MyPostsPage'
 import NotFoundPage from './pages/NotFoundPage'
@@ -27,6 +28,7 @@ const App = () => (
         <Route element={<ProtectedRoute />}>
           <Route path="/" element={<AllPostsPage />} />
           <Route path="/my-posts" element={<MyPostsPage />} />
+          <Route path="/comments" element={<CommentsPage />} />
           <Route path="/posts/new" element={<PostFormPage />} />
           <Route path="/posts/:id" element={<PostDetailPage />} />
           <Route path="/posts/:id/edit" element={<PostFormPage />} />

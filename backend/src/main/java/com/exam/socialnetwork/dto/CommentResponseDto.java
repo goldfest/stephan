@@ -11,6 +11,7 @@ public class CommentResponseDto {
     private Long id;
     private String text;
     private Long postId;
+    private String postTitle;
     private UserResponseDto author;
     private boolean editableByCurrentUser;
     private LocalDateTime createdAt;

@@ -30,6 +30,9 @@ const AppNavbar = () => {
                 <NavLink className="nav-link" to="/my-posts">Мои посты</NavLink>
               </li>
               <li className="nav-item">
+                <NavLink className="nav-link" to="/comments">Комментарии</NavLink>
+              </li>
+              <li className="nav-item">
                 <NavLink className="nav-link" to="/posts/new">Создать пост</NavLink>
               </li>
               {isAdmin && (

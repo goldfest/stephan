@@ -39,6 +39,28 @@ public class CommentService {
                 .map(comment -> toDto(comment, currentUser));
     }
 
+    @Transactional(readOnly = true)
+    public Page<CommentResponseDto> search(Long postId, int page, int size, Authentication authentication) {
+        UserEntity currentUser = userService.getCurrentUser(authentication);
+        Pageable pageable = PageRequest.of(
+                Math.max(page, 0),
+                Math.min(Math.max(size, 1), 50),
+                Sort.by(Sort.Direction.DESC, "createdAt")
+        );
+
+        if (postId != null) {
+            if (!postRepository.existsById(postId)) {
+                throw new ResponseStatusException(NOT_FOUND, "Пост не найден");
+            }
+
+            return commentRepository.findByPostId(postId, pageable)
+                    .map(comment -> toDto(comment, currentUser));
+        }
+
+        return commentRepository.findAll(pageable)
+                .map(comment -> toDto(comment, currentUser));
+    }
+
     @Transactional
     public CommentResponseDto create(Long postId, CommentRequestDto request, Authentication authentication) {
         UserEntity currentUser = userService.getCurrentUser(authentication);
@@ -87,6 +109,7 @@ public class CommentService {
                 .id(comment.getId())
                 .text(comment.getText())
                 .postId(comment.getPost().getId())
+                .postTitle(comment.getPost().getTitle())
                 .author(userService.toDto(comment.getAuthor()))
                 .editableByCurrentUser(editable)
                 .createdAt(comment.getCreatedAt())
