@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { getApiError } from '../api/axiosClient'
 import AlertMessage from '../components/AlertMessage'
 import Loading from '../components/Loading'
@@ -14,7 +14,7 @@ const UsersPage = () => {
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
 
-  const loadUsers = async () => {
+  const loadUsers = useCallback(async () => {
     setLoading(true)
     setError('')
     try {
@@ -25,7 +25,11 @@ const UsersPage = () => {
     } finally {
       setLoading(false)
     }
-  }
+  }, [])
+
+  useEffect(() => {
+    loadUsers()
+  }, [loadUsers])
 
   useEffect(() => {
     loadUsers()

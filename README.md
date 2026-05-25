@@ -41,7 +41,7 @@ Full-stack SPA по варианту **№5: «Социальная сеть. Р
   - навигация;
   - индикаторы загрузки;
   - сообщения об ошибках и успешных операциях.
-- Хранение данных между запусками: файловая база **H2** в `backend/data/social-network-db`.
+- Хранение данных между запусками: файловая база **PostreSQL** 
 - Файл с тестовыми данными: `backend/src/main/resources/seed-data.json`.
 - Swagger UI: `http://localhost:8080/swagger-ui.html`.
 
@@ -83,9 +83,4 @@ npm run dev -- --host 127.0.0.1 --port 5173
 
 Frontend будет доступен на `http://127.0.0.1:5173/`.
 
-Если backend запущен на другом адресе, создай файл `frontend/.env`:
-
-```env
-VITE_API_URL=http://localhost:8080/api
-```
 
